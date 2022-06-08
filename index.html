@@ -1,399 +1,826 @@
 ﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Syed Shahriyar Ali</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <style>
-        .media img {
-            transform-origin: -100 0;
-            transition: transform .25s, visibility .25s ease-in
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        .media img:hover {
-            transform: scale(1.5)
-        }
-    </style>
+  <title>Syed Shahriyar Ali</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body id="top">
-    <header>
-        <div class="row">
-            <div class="top-bar">
-                <a class="menu-toggle" href="#"> <span>Menu</span> </a>
-                <div class="logo"> <a href="http://shahriyarali.com">SHAHRIYAR</a></div>
-                <nav id="main-nav-wrap">
-                    <ul class="main-navigation">
-                        <li class="current"> <a class="smoothscroll" href="#intro" title="">Home</a></li>
-                        <li> <a class="smoothscroll" href="#about" title="">About</a></li>
-                        <li> <a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
-                        <li> <a class="smoothscroll" href="#stats" title="">Stats</a></li>
-                        <li> <a class="smoothscroll" href="#contact" title="">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <section id="intro">
-        <div class="intro-overlay"></div>
-        <div class="intro-content">
-            <div class="row">
-                <div class="col-twelve">
-                    <h5>Hello, World.</h5>
-                    <h1>I'm Syed Shahriyar.</h1>
-                    <p class="intro-position"> <span>Developer</span> <span>Student</span></p>
-                    <a class="button stroke" href="Resume-Syed-Shahriyar-Ali.pdf" title="" target="_blank">Download CV <i
-                        class="fa fa-download"></i></a>
-                    <a class="button stroke smoothscroll" href="#about" title="">More About Me <i
-                            class="fa fa-angle-down"></i></a>
-                </div>
-            </div>
-        </div>
-        <ul class="intro-social">
-            <li><a href="https://www.instagram.com/shahriyar_.ali/" target="_blank"><i class="fa fa-instagram"></i></a>
-            </li>
-            <li><a href="https://www.linkedin.com/in/syed-shahriyar-ali/" target="_blank"><i
-                        class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100073807159890" target="_blank"><i
-                        class="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/s_shahriyar_ali" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/SyedShahriyarAli" target="_blank"><i class="fa fa-github"></i></a></li>
-            <!-- <li><a href="https://www.fiverr.com/syed_shahriyar" target="_blank"><i class="fa fa-fiverr"></i></a></li> -->
+<body>
+  <div class="intro-overlay"></div>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <h1><a href="index.html">Syed Shahriyar Ali</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h2>I'm a passionate <span>developer</span> from Pakistan</h2>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#resume">Resume</a></li>
+          <!-- <li><a class="nav-link" href="#services">Services</a></li> -->
+          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-    </section>
-    <section id="about">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>About</h5>
-                <h1>Let me introduce myself.</h1>
-                <div class="intro-info">
-                    <img src="images/Profile_Pic.jpg" alt="Profile Picture" draggable="false">
-                    <p class="lead">Highly optimistic towards new evolving technologies and keen to learn everything
-                        which is in my access or had strive to learn new curves of technologies. I am an explorer who
-                        learns from observation, focus and curiosity to consistently foster the creative thinking.
-                        I have hands on experience of Web API, ASP.NET, MSSQL Server, Desktop Applications, Node JS,
-                        Mongo DB, Microsoft Azure, Flutter and jQuery (JavaScript).</p>
-                </div>
-            </div>
-        </div>
-        <div class="row about-content">
-            <div class="col-six tab-full">
-                <h3>Profile</h3>
-                <ul class="info-list">
-                    <li> <strong>Fullname:</strong> <span>Syed Shahriyar Ali</span></li>
-                    <li> <strong>Birth Date:</strong> <span>November 29, 2003</span></li>
-                    <li> <strong>Job:</strong> <span>Project Lead At <a href="http://www.Turf.pk">TURF</a> </span>
-                    </li>
-                    <li> <strong>Website:</strong> <span>www.shahriyarali.com</span></li>
-                    <li> <strong>Email:</strong> <span>shahriyarali08@gmai.com</span></li>
-                </ul>
-            </div>
-            <div class="col-six tab-full">
-                <h3>Skills</h3>
-                <ul class="skill-bars">
-                    <li>
-                        <div class="progress percent80"> <span>80%</span></div>
-                        <strong>Javascript (JQuery)</strong>
-                    </li>
-                    <li>
-                        <div class="progress percent80"> <span>80%</span></div>
-                        <strong>C#</strong>
-                    </li>
-                    <li>
-                        <div class="progress percent80"> <span>80%</span></div>
-                        <strong>MSSQL</strong>
-                    </li>
-                    <li>
-                        <div class="progress percent75"> <span>75%</span></div>
-                        <strong>Node JS With Mongo DB</strong>
-                    </li>
-                    <li>
-                        <div class="progress percent70"> <span>70%</span></div>
-                        <strong>Flutter</strong>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section id="portfolio">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>Portfolio</h5>
-                <h1>Check Out Some of My Projects.</h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row portfolio-content">
-            <div class="col-twelve">
-                <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/yelpcamp.png" alt="YelpCamp">
-                            <a href="#modal-01" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">YELPCAMP</h3>
-                                        <span class="folio-types"> DEMO PROJECT </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/resturant.png" alt="Shutterbug">
-                            <a href="#modal-02" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">RESTURANT</h3>
-                                        <span class="folio-types"> DESKTOP APPLICATION </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/pos.png" alt="Lighthouse">
-                            <a href="#modal-05" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">POINT OF SALE</h3>
-                                        <span class="folio-types"> DESKTOP APPLICATION </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/cms.png" alt="Clouds">
-                            <a href="#modal-03" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">CMS</h3>
-                                        <span class="folio-types"> COURIER MANAGEMENT SYSTEM </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/qms.png" alt="ARDUINO PROJECT">
-                            <a href="#modal-06" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">ARDUINO PROJECT</h3>
-                                        <span class="folio-types"> QUEUE MANAGEMENT SYSTEM </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/era.png" alt="Beetle">
-                            <a href="#modal-04" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">ASSISTANT DEVELOPER</h3>
-                                        <span class="folio-types"> WEB APPLICATION </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div id="modal-01" class="popup-modal slider mfp-hide">
-                        <div class="media"> <img src="images/portfolio/yelpcamp.png" alt="" /></div>
-                        <div class="description-box">
-                            <h4>YelpCamp</h4>
-                            <p>YelpCamp is my first Project of Node JS and Mongo DB.It is all about Uploading Your
-                                Experience about a Tour you enjoyed.You can Edit Them & Delete Them. You Can Also Post
-                                Reviews on other people Uploads.Its gonna be fun just visit yelpcamp.shahriyarali.com
-                            </p>
-                        </div>
-                        <div class="link-box"> <a href="http://yelpcamp.shahriyarali.com">VISIT</a> <a href="#"
-                                class="popup-modal-dismiss">Close</a></div>
-                    </div>
-                    <div id="modal-02" class="popup-modal slider mfp-hide">
-                        <div class="media"> <img src="images/portfolio/Resturant.png" alt="" /></div>
-                        <div class="description-box">
-                            <h4>Point Of Sale</h4>
-                            <p>I have Started Software Development from Desktop Applications.Resturant is a POS c#
-                                Application. It manages your Inventory, your Cash, your Custumers, your Ledgers, your
-                                Purchase and obviously you Sales as it is a POS Software.</p>
-                            <div class="categories">DESKTOP APPLICATION</div>
-                        </div>
-                        <div class="link-box"> <a
-                                href="https://www.youtube.com/watch?v=X7pyysCU150&list=PLyJp7fKAPRGCYdBiUOYcAas3IltiRn1iE">Tutorials</a>
-                            <a href="#" class="popup-modal-dismiss">Close</a>
-                        </div>
-                    </div>
-                    <div id="modal-03" class="popup-modal slider mfp-hide">
-                        <div class="media"> <img src="images/portfolio/cms.png" alt="" /></div>
-                        <div class="description-box">
-                            <h4>CMS</h4>
-                            <p>Courier Management System (CMS) provides you facilities to manage your courirer including
-                                Tracking, Riders Assignment, Labels Printing and Managing Permanent and Walk-In
-                                Customers Separately.</p>
-                            <div class="categories">WORKING ON</div>
-                        </div>
-                        <div class="link-box"> <a href="http://cms.shahriyarali.com">VISIT</a> <a href="#"
-                                class="popup-modal-dismiss">Close</a></div>
-                    </div>
-                    <div id="modal-04" class="popup-modal slider mfp-hide">
-                        <div class="media"> <img src="images/portfolio/era.png" alt="" /></div>
-                        <div class="description-box">
-                            <h4>ERA</h4>
-                            <p>Complete POS solution with, fool-proof Inventory Management, Promotions with top notch
-                                auditing features.Direct integration with Facebook… share, boost and increase sales!
-                                Serve your customers with Facebook & WhatsApp instantly.</p>
-                            <div class="categories">@A Product of <a href="https://turf.pk">Turf</a></div>
-                        </div>
-                        <div class="link-box"> <a href="https://eraconnect.net/">VISIT</a> <a href="#"
-                                class="popup-modal-dismiss">Close</a></div>
-                    </div>
-                    <div id="modal-05" class="popup-modal slider mfp-hide">
-                        <div class="media"> <img src="images/portfolio/pos.png" alt="" /></div>
-                        <div class="description-box">
-                            <h4>A Complete POS Softwares for Mini Marts</h4>
-                            <p>It is also a Desktop Application with almost every feature a customer needs i.e. Multi
-                                Counters, Barcode Printing, Purchase Orders, Send Mails.</p>
-                            <div class="categories">Point of Sale</div>
-                        </div>
-                        <div class="link-box"> <a href="#"><br></a> <a href="#" class="popup-modal-dismiss">Close</a>
-                        </div>
-                    </div>
-                    <div id="modal-06" class="popup-modal slider mfp-hide">
-                        <div class="media"> <img src="images/portfolio/qms.png" alt="" /></div>
-                        <div class="description-box">
-                            <h4>QUEUE MANAGEMENT SYSTEM</h4>
-                            <p>It is Desktop Application for managing queues like Banks and Schools etc. Print Tokens ,
-                                Daily Reports, Multiple Voices, Multi Counters are Keys Features of this Project.</p>
-                            <div class="categories">COMPLETED</div>
-                        </div>
-                        <div class="link-box"> <a href="#" class="popup-modal-dismiss"> <br> </a> <a href="#"
-                                class="popup-modal-dismiss">Close</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="stats" class="count-up">
-        <div class="row">
-            <div class="col-twelve">
-                <div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
-                    <div class="bgrid stat">
-                        <div class="icon-part"> <i class="icon-pencil-ruler"></i></div>
-                        <h3 class="stat-count"> 9</h3>
-                        <h5 class="stat-title"> Projects</h5>
-                    </div>
-                    <div class="bgrid stat">
-                        <div class="icon-part"> <i class="icon-users"></i></div>
-                        <h3 class="stat-count"> 1</h3>
-                        <h5 class="stat-title"> Happy Clients</h5>
-                    </div>
-                    <div class="bgrid stat">
-                        <div class="icon-part"> <i class="icon-badge"></i></div>
-                        <h3 class="stat-count"> 2</h3>
-                        <h5 class="stat-title"> Awards Received</h5>
-                    </div>
-                    <div class="bgrid stat">
-                        <div class="icon-part"> <i class="icon-light-bulb"></i></div>
-                        <h3 class="stat-count"> 120</h3>
-                        <h5 class="stat-title"> Crazy Ideas</h5>
-                    </div>
-                    <div class="bgrid stat">
-                        <div class="icon-part"> <i class="icon-cup"></i></div>
-                        <h3 class="stat-count"> 1500</h3>
-                        <h5 class="stat-title"> Tea Cups</h5>
-                    </div>
-                    <div class="bgrid stat">
-                        <div class="icon-part"> <i class="icon-clock"></i></div>
-                        <h3 class="stat-count"> 7200</h3>
-                        <h5 class="stat-title"> Hours</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>Contact</h5>
-                <h1>I'd Love To Hear From You.</h1>
-            </div>
-        </div>
-        <div class="row contact-form">
-            <div class="col-twelve">
-                <form name="contactForm" id="contactForm">
-                    <fieldset>
-                        <div class="form-field"> <input name="contactName" type="text" id="contactName"
-                                placeholder="Name" value="" minlength="2" required=""></div>
-                        <div class="form-field"> <input name="contactEmail" type="email" id="contactEmail"
-                                placeholder="Email" value="" required=""></div>
-                        <div class="form-field"> <input name="contactSubject" type="text" id="contactSubject"
-                                placeholder="Subject" value=""></div>
-                        <div class="form-field"><textarea name="contactMessage" id="contactMessage"
-                                placeholder="message" rows="10" cols="50" required=""></textarea></div>
-                        <div class="form-field">
-                            <button class="submitform">Submit</button>
-                            <div id="submit-loader">
-                                <div class="text-loader">Sending...</div>
-                                <div class="s-loader">
-                                    <div class="bounce1"></div>
-                                    <div class="bounce2"></div>
-                                    <div class="bounce3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-                <div id="message-warning"></div>
-                <div id="message-success"> <i class="fa fa-check"></i>Your message was sent, thank you!<br></div>
-            </div>
-        </div>
-        <div class="row contact-info">
-            <div class="col-four tab-full">
-                <div class="icon"> <i class="icon-pin"></i></div>
-                <h5>Where to find me</h5>
-                <p> Karachi , Pakistan.</p>
-            </div>
-            <div class="col-four tab-full collapse">
-                <div class="icon"> <i class="icon-mail"></i></div>
-                <h5>Email Me At</h5>
-                <p>shahriyarali08@gmail.com</p>
-            </div>
-            <div class="col-four tab-full">
-                <div class="icon"> <i class="icon-phone"></i></div>
-                <h5>Call Me At</h5>
-                <p>Phone: +923122667009</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="row">
-            <div class="col-twelve tab-full">
-                <div class="copyright"> <span>© Copyright 2022</span> <span>Designed by <a
-                            href="http://www.shahriyarali.com/"> ~ Syed Shahriyar Ali</a> </span></div>
-            </div>
-            <div id="go-top"> <a class="smoothscroll" title="Back to Top" href="#top"> <i
-                        class="fa fa-long-arrow-up"></i> </a></div>
-        </div>
-    </footer>
-    <div id="preloader">
-        <div id="loader"></div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="https://twitter.com/s_shahriyar_ali" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100073807159890" target="_blank" class="facebook"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/shahriyar_.ali/" target="_blank" class="instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/syed-shahriyar-ali/" target="_blank" class="linkedin"><i
+            class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/SyedShahriyarAli" target="_blank" class="linkedin"><i class="bi bi-github"></i></a>
+      </div>
+
     </div>
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+  </header><!-- End Header -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <p>Learn more about me</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 text-center" data-aos="fade-right">
+          <img src="assets/img/me.jpg" style="max-width: 50% !important;" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Full Stack Developer</h3>
+          <p class="fst-italic">Highly optimistic towards new evolving technologies and keen to learn everything which
+            is in my access or had strive to learn new curves of technologies. I am an explorer who learns from
+            observation, focus and curiosity to consistently foster the creative thinking.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>29 Nov 2003</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.shahriyarali.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+92 312 2667009</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Karachi, Pakistan</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Intermediate</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Emai:</strong> <span>shahriyarali08@gmail.com</span>
+                </li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <p>
+            I have hands on experience of Web API, ASP.NET, MSSQL Server, Desktop Applications, Node JS, Mongo DB,
+            Microsoft Azure, Flutter, jQuery (JavaScript), HTML, CSS & Bootstap.
+          </p> -->
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+    <!-- ======= Counts ======= -->
+    <div class="counts container">
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-emoji-smile"></i>
+            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Happy Clients</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <i class="bi bi-journal-richtext"></i>
+            <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-clock"></i>
+            <span data-purecounter-start="0" data-purecounter-end="7200" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Hours</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-award"></i>
+            <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Awards</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- End Counts -->
+
+    <!-- ======= Skills  ======= -->
+    <div class="skills container">
+
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="row skills-content">
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">C# <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">JavaScript <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Microsoft SQL Server <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">NODE JS WITH MONGO DB <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">FLUTTER <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Amazon Web Services <i class="val">45%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- End Skills -->
+
+    <!-- ======= Interests ======= -->
+    <div class="interests container">
+
+      <div class="section-title">
+        <h2>Interests</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-microsoft"></i>
+            <h3>Microsoft</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-google" style="color: #fff;"></i>
+            <h3>Google</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-github" style="color: #fff;"></i>
+            <h3>Github</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-amazon" style="color: #fff;"></i>
+            <h3>Amazon</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-aws" style="color: #fff;"></i>
+            <h3>Amazon Web Services</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-windows" style="color: #fff;"></i>
+            <h3>Windows</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-nodejs" style="color: #fff;"></i>
+            <h3>Node.js</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-google-cloud" style="color: #fff;"></i>
+            <h3>Google Cloud</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-apple" style="color: #fff;"></i>
+            <h3>Apple</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-linkedin" style="color: #fff;"></i>
+            <h3>Linkedin</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bi-spotify" style="color: #fff;"></i>
+            <h3>Spotify</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="bx bxl-firebase" style="color: #fff;"></i>
+            <h3>Firebase</h3>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Interests -->
+
+    <!-- ======= Testimonials ======= -->
+    <!-- <div class="testimonials container">
+
+      <div class="section-title">
+        <h2>Testimonials</h2>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper"> -->
+
+    <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+            </div>
+          </div> -->
+    <!-- End testimonial item -->
+
+    <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+            </div>
+          </div> -->
+    <!-- End testimonial item -->
+
+    <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
+                labore quem eram duis noster aute amet eram fore quis sint minim.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+            </div>
+          </div> -->
+    <!-- End testimonial item -->
+
+    <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
+                dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+            </div>
+          </div> -->
+    <!-- End testimonial item -->
+
+    <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+            </div>
+          </div> -->
+    <!-- End testimonial item -->
+
+    <!-- </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="owl-carousel testimonials-carousel">
+
+      </div>
+
+    </div> -->
+    <!-- End Testimonials  -->
+
+  </section><!-- End About Section -->
+
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>Check My Resume</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Summary</h3>
+          <div class="resume-item pb-0">
+            <h4>Syed Shahriyar Ali</h4>
+            <p><em>2+ years of working experience in development and project management.</em>
+            </p>
+            <p>
+            <ul>
+              <li>Malir, Karachi</li>
+              <li>+92 312 2667009</li>
+              <li>shahriyarali08@gmail.com</li>
+            </ul>
+            </p>
+          </div>
+
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-item">
+            <h4>Intermediate</h4>
+            <h5>2020 - 2022</h5>
+            <p><em>Adamjee Government Science College, Karachi</em></p>
+            <p></p>
+          </div>
+          <div class="resume-item">
+            <h4>Matriculation</h4>
+            <h5>2018 - 2020</h5>
+            <p><em>Education Trust Nasra School Malir, Karachi</em></p>
+            <p></p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title">Professional Experience</h3>
+          <div class="resume-item">
+            <h4>Project Lead</h4>
+            <h5>Feb 2022 - Present</h5>
+            <p><em>Turf, Pakistan</em></p>
+            <p>
+            <ul>
+              <li>My responsiblity is project planning and team management.</li>
+              <!-- <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.
+              </li>
+              <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the
+                design</li>
+              <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li> -->
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4>Full Stack Developer</h4>
+            <h5>2020 - 2022</h5>
+            <p><em>Turf, Pakistan</em></p>
+            <p>
+            <ul>
+              <li>Developed ERA (Easy Retail Access), A project that developed to help retail companies to tackle
+                operational challenges and process automation</li>
+              <li>Developed QMS (Queue Management System) for Education Institutes to make the process of fee submission
+                fast and easy.</li>
+              <li>Developed POS (Point Of Sale Desktop Application) for Mini Marts.</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>My Services</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4><a href="">Lorem Ipsum</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4><a href="">Sed ut perspiciatis</a></h4>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4><a href="">Magni Dolores</a></h4>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-world"></i></div>
+            <h4><a href="">Nemo Enim</a></h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-slideshow"></i></div>
+            <h4><a href="">Dele cardo</a></h4>
+            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-arch"></i></div>
+            <h4><a href="">Divera don</a></h4>
+            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>My Works</p>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div> -->
+
+      <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/yelpcamp.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>YelpCamp</h4>
+              <p>Demo Project</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/yelpcamp.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="YelpCamp"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/cms.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>CMS</h4>
+              <p>Courier Management System</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/cms.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="CMS (Courier Management System)"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/era.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>ERA</h4>
+              <p>Easy Retail Access</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/era.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="ERA (Easy Retail Access)"><i class="bx bx-plus"></i></a>
+                <a href="era_details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/resturant.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>eLite</h4>
+              <p>Resturant Management System</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/resturant.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="eLite (Resturant Management System)"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/pos.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>POS</h4>
+              <p>Point Of Sale</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/pos.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Point Of Sale (Desktop Application)"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/salon.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Waqar's Salon</h4>
+              <p>Salon Management System</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/salon.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Waqar's Salon (Salon Management System)"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                  class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Contact Me</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>My Address</h3>
+            <p>F1-B Railway Society Model Colony, Karachi</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a target="_blank" href="https://twitter.com/s_shahriyar_ali" class="twitter"><i
+                  class="bi bi-twitter"></i></a>
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=100073807159890" class="facebook"><i
+                  class="bi bi-facebook"></i></a>
+              <a target="_blank" href="https://www.instagram.com/shahriyar_.ali/" class="instagram"><i
+                  class="bi bi-instagram"></i></a>
+              <a target="_blank" href="https://github.com/SyedShahriyarAli" class="google-plus"><i
+                  class="bi bi-github"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/syed-shahriyar-ali/" class="linkedin"><i
+                  class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Me</h3>
+            <p>shahriyarali08@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>Call Me</h3>
+            <p>+92 312 2667009</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="" method="" role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="button" id="btnSendMail">Send Message</button></div>
+      </form>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
