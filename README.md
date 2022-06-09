@@ -5,6 +5,7 @@ Highly optimistic towards new evolving technologies and keen to learn everything
 Skills: ASP.NET | Node.js | Flutter | Microsoft SQL SERVER | JavaScript | HTML | CSS | Bootstrap
 
 - 📫 How to reach me: shahriyarali08@gmail.com 
+- 💻 Website: https://shahriyarali.com
 - 😄 Pronouns: He, Him 
 - ⚡ Fun fact: I may be slow to respond. 
 
