@@ -19,7 +19,9 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #050505 url("../img/bg-me-1.jpg") top right no-repeat;
+  background: #050505 url("../img/bg-me-1.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
   background-size: contain;
   left: 0;
   right: 0;
