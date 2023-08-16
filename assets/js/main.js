@@ -53,30 +53,30 @@
     this.classList.toggle('bi-x')
   })
 
-  on('click', '#btnSendMail', function (e) {
-    select('.loading').style.display = 'block';
-    var settings = {
-      "url": "https://era-ecommerce.azurewebsites.net/api/sendEmail",
-      "method": "POST",
-      "timeout": 0,
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "data": JSON.stringify({
-        "Body": select("#message").value,
-        "Message": "",
-        "Subject": select('#subject').value,
-        "Name": `${select("#name").value} | ${select("#email").value}`,
-        "Email": "shahriyarali08@gmail.com"
-      }),
-    };
+  // on('click', '#btnSendMail', function (e) {
+  //   select('.loading').style.display = 'block';
+  //   var settings = {
+  //     "url": "https://era-ecommerce.azurewebsites.net/api/sendEmail",
+  //     "method": "POST",
+  //     "timeout": 0,
+  //     "headers": {
+  //       "Content-Type": "application/json"
+  //     },
+  //     "data": JSON.stringify({
+  //       "Body": select("#message").value,
+  //       "Message": "",
+  //       "Subject": select('#subject').value,
+  //       "Name": `${select("#name").value} | ${select("#email").value}`,
+  //       "Email": "shahriyarali08@gmail.com"
+  //     }),
+  //   };
 
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-      select('.loading').style.display = 'none';
-      select('.sent-message').style.display = 'block'
-    });
-  });
+  //   $.ajax(settings).done(function (response) {
+  //     console.log(response);
+  //     select('.loading').style.display = 'none';
+  //     select('.sent-message').style.display = 'block'
+  //   });
+  // });
 
   /**
    * Scrool with ofset on links with a class name .scrollto
