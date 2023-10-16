@@ -1,0 +1,103 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Geologica', sans-serif;
+}
+
+#layout{
+    max-width: 40rem;
+    margin: 3rem auto 6rem;
+    padding: 0 1rem;
+}
+
+#header{
+    text-align: center;
+}
+
+#profile_picture{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+#name{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -.05rem;
+    margin: 1rem 0;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+a {
+    color: #0070f3;
+    text-decoration: none;
+}
+
+#socials{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#socials a{
+    padding: 8px 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 0 5px;
+    color: black;
+}
+
+.row{
+    display: flex;
+    color: black;
+    overflow: hidden;
+}
+.col-4{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.col-4 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.col-8{
+    width: 60%;
+}
+h3{
+    margin: 0;
+}
+
+.p-1{
+    padding: 0 1rem;
+}
+
+.date{
+    font-size: 0.8rem;
+    color: gray;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.categories{
+    font-size: 0.9rem;
+}
+
+.description{
+    font-size: 0.9rem;
+    text-wrap: nowrap;
+}
+
+#footer p{
+    text-align: center;
+    font-size: 1rem;
+}
