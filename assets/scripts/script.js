@@ -33,7 +33,7 @@ function GotBlogs(data) {
     var date = new Date(blogs[i].pubDate);
     html += `<a href="${blogs[i].guid}" target="_blank">
             <div class="row">
-                <div class="col-4"> <img src="${blogs[i].thumbnail}"/> </div>
+                <div class="col-4"> <img src="${blogs[i].thumbnail != ''? blogs[i].thumbnail : "assets/images/medium.jpeg"}"/> </div>
                 <div class="col-8 p-1">
                     <h3>${blogs[i].title}</h3>
                     <span class="categories">${blogs[i].categories.join(
