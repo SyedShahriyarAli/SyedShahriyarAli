@@ -5,20 +5,9 @@ $(function () {
 
 function GetBlogs() {
   $.ajax({
-    url: "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@shahriyarali08",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://blogs.shahriyarali.com/feed.rss",
     method: "GET",
     success: GotBlogs,
-    error: function () {
-      console.log("Error: Unable to fetch data from the API");
-    },
-  });
-}
-
-function GetVideos() {
-  $.ajax({
-    url: "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCgl164IdvBLNN44DYE4l5Rg&maxResults=50&key=AIzaSyCGH47FLPHRaobDe2-rc4RdToWeLKsPZvk&maxResults=3&order=date",
-    method: "GET",
-    success: GotVideos,
     error: function () {
       console.log("Error: Unable to fetch data from the API");
     },
@@ -31,14 +20,12 @@ function GotBlogs(data) {
   var html = "";
   for (var i = 0; i < 3; i++) {
     var date = new Date(blogs[i].pubDate);
-    html += `<a href="${blogs[i].guid}" target="_blank">
+    html += `<a href="${blogs[i].link}" target="_blank">
             <div class="row">
-                <div class="col-4"> <img src="${blogs[i].thumbnail != ''? blogs[i].thumbnail : "assets/images/medium.jpeg"}"/> </div>
+                <div class="col-4"> <img src="${blogs[i].thumbnail != '' ? blogs[i].thumbnail : "assets/images/medium.jpeg"}"/> </div>
                 <div class="col-8 p-1">
                     <h3>${blogs[i].title}</h3>
-                    <span class="categories">${blogs[i].categories.join(
-                      ", "
-                    )}</span>
+                    <span class="categories">${blogs[i].categories.join(", ")}</span>
                     <span class="date">${date.toLocaleString("en-US")}</span>
                 </div>
             </div>
@@ -47,6 +34,17 @@ function GotBlogs(data) {
   }
 
   $("#blogs").html(html);
+}
+
+function GetVideos() {
+  $.ajax({
+    url: "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCgl164IdvBLNN44DYE4l5Rg&maxResults=50&key=AIzaSyCGH47FLPHRaobDe2-rc4RdToWeLKsPZvk&maxResults=3&order=date",
+    method: "GET",
+    success: GotVideos,
+    error: function () {
+      console.log("Error: Unable to fetch data from the API");
+    },
+  });
 }
 
 function GotVideos(data) {
