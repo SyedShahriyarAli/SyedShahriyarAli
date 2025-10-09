@@ -1,11 +1,14 @@
-Hello, I'm **Syed Shahriyar**, a dedicated software engineer deeply immersed in the tech world.
+Hello, I'm Shahriyar, a .NET developer with 5+ years of experience building scalable enterprise web and desktop applications. My expertise spans .NET Core, C#, Blazor, Angular, and RESTful APIs, with a proven track record of delivering high-performance solutions for industries like healthcare and FMCG.
 
-Currently, I lead the tech team at [Turf.pk](https://turf.pk), a startup that's all about developers. It's an exciting place where we encourage innovation and coding expertise.
+At Turf Tech, I’ve led the development of critical platforms, including:
+🔹 ERA POS & E-Commerce (Aga Khan University): Delivered a system handling 10k+ daily transactions with 99.9% uptime.
+🔹 Inventory System (Colgate Palmolive): Built a Blazor PWA integrated with SAP, reducing manual reconciliation time by 35%.
+🔹 Optimized SQL Server queries and APIs, cutting latency by 50%+
+🔹 Architected Blazor front-ends with ASP.NET Core, improving POS flow conversion by 12%
+🔹 Mentored junior developers, reducing post-release defects by 30%
 
-In addition to my work, I'm pursuing a Bachelors in Artificial Intelligence at [Dawood University](https://duet.edu.pk/), blending academic learning with practical experience to stay updated in the tech industry.
+Beyond coding, I’m passionate about clean architecture, microservices, CI/CD, and cloud-first development with Azure.
 
-But my tech involvement doesn't stop at work. I have a passion for sharing knowledge, which I do through my YouTube channel [CodeWithShahri](https://youtube.com/@shahriyarali08?si=_arQkhUFBCCv80IT), where I help aspiring developers learn web development skills.
+When I’m not building software, I write about tech on Medium and actively contribute as a Microsoft Learn Student Ambassador.
 
-I also love writing. You can find my tech-focused articles on [Medium](https://medium.com/@shahriyarali08), where I share my thoughts with a wider audience.
-
-I also proudly hold the role of [MLSA](https://mvp.microsoft.com/en-US/studentambassadors/profile/cc06833b-7bdc-41a4-8fa1-3d95cd9daffe) (Microsoft Learn Student Ambassador), actively engaging, contributing, and collaborating within the tech community.
+Always open to collaborating on innovative projects and contributing to impactful teams.
