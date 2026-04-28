@@ -1,0 +1,43 @@
+---
+export interface Props {
+  span?: string;
+  rowSpan?: string;
+  id?: string;
+  title?: string;
+}
+
+const { span = "col-span-1", rowSpan = "row-span-1", id, title } = Astro.props;
+---
+
+<div class={`glass-panel bento-item ${span} ${rowSpan}`} id={id}>
+  {title && (
+    <div class="bento-header terminal-font">
+      <span class="terminal-prompt">&gt;</span> ./show {title.toLowerCase()}
+    </div>
+  )}
+  <div class="bento-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .bento-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bento-header {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .bento-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+</style>

@@ -1,0 +1,731 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TerminalHeader from "../components/TerminalHeader.astro";
+import BentoCard from "../components/BentoCard.astro";
+---
+
+<Layout title="Syed Shahriyar Ali - Software Engineer">
+	<div class="bento-container">
+		<div class="col-span-4">
+			<TerminalHeader path="/portfolio" />
+		</div>
+
+		<!-- Hero Section -->
+		<BentoCard span="col-span-3" rowSpan="row-span-2" id="about">
+			<div class="hero-content">
+				<img
+					src="https://github.com/SyedShahriyarAli.png"
+					alt="Syed Shahriyar"
+					class="avatar"
+				/>
+				<div>
+					<h1 class="neon-text">Syed Shahriyar Ali</h1>
+					<h2>Software Engineer @ AME</h2>
+					<p class="bio mt-4">
+						I'm a passionate Software Engineer and AI enthusiast
+						orchestrating AI-powered chatbots, intelligent
+						dashboards, and enterprise solutions. I specialize in
+						bridging the gap between cutting-edge AI and robust
+						engineering.
+					</p>
+					<div class="social-links mt-4">
+						<a
+							href="https://github.com/SyedShahriyarAli"
+							target="_blank"
+							><i class="fa-brands fa-github"></i> GitHub</a
+						>
+						<a
+							href="https://www.linkedin.com/in/syed-shahriyar-ali/"
+							target="_blank"
+							><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+						>
+						<a
+							href="/Syed-Shahriyar-Ali-.NET-Developer.pdf"
+							target="_blank"
+							><i class="fa-solid fa-file-pdf"></i> Resume</a
+						>
+						<a href="mailto:shahriyarali08@gmail.com"
+							><i class="fa-solid fa-envelope"></i> Email</a
+						>
+					</div>
+				</div>
+			</div>
+		</BentoCard>
+
+		<!-- Fast Stats / Quick Info -->
+		<BentoCard span="col-span-1" rowSpan="row-span-1" title="status">
+			<div class="stats-grid">
+				<div class="stat-item">
+					<span class="stat-value neon-text">5+</span>
+					<span class="stat-label">Years Exp</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-value neon-text">AI/.NET</span>
+					<span class="stat-label">Stack</span>
+				</div>
+			</div>
+		</BentoCard>
+
+		<!-- Education -->
+		<BentoCard span="col-span-1" rowSpan="row-span-1" title="education">
+			<div class="edu-item">
+				<i class="fa-solid fa-graduation-cap edu-icon"></i>
+				<div>
+					<h4>BS. Artificial Intelligence</h4>
+					<p class="text-sm">Dawood University</p>
+				</div>
+			</div>
+		</BentoCard>
+
+		<!-- Skills -->
+		<BentoCard
+			span="col-span-4"
+			rowSpan="row-span-1"
+			id="skills"
+			title="skills"
+		>
+			<div class="skills-container">
+				{
+					[
+						".NET Core",
+						"C#",
+						"Blazor",
+						"ASP.NET Web API",
+						"Angular",
+						"TypeScript",
+						"Entity Framework",
+						"SQL Server",
+						"Azure",
+						"AI Chatbots",
+						"Machine Learning",
+						"RESTful APIs",
+					].map((skill) => <span class="skill-tag">{skill}</span>)
+				}
+			</div>
+		</BentoCard>
+
+		<!-- Experience -->
+		<BentoCard
+			span="col-span-2"
+			rowSpan="row-span-2"
+			id="experience"
+			title="experience"
+		>
+			<div class="timeline">
+				<div class="timeline-item mt-2">
+					<h4>Software Engineer</h4>
+					<span class="timeline-company"
+						>AME Software Solutions | Oct 2025 - Present</span
+					>
+					<ul>
+						<li>
+							Architecting and developing AI-powered chatbots with
+							natural language processing capabilities.
+						</li>
+						<li>
+							Building intelligent dashboards integrated with
+							machine learning models for data-driven insights.
+						</li>
+						<li>
+							Designing enterprise software solutions using .NET
+							Core, Blazor, and Azure cloud services.
+						</li>
+					</ul>
+				</div>
+				<div class="timeline-item">
+					<h4>Technical Lead</h4>
+					<span class="timeline-company"
+						>Turf Tech | Jul 2023 - Oct 2025</span
+					>
+					<ul>
+						<li>
+							Led a team of developers in delivering enterprise
+							applications for clients including Agha Khan
+							University.
+						</li>
+						<li>
+							Architected scalable solutions using Blazor
+							WebAssembly, ASP.NET Core Web APIs, and Entity
+							Framework Core.
+						</li>
+						<li>
+							Mentored junior developers through code reviews and
+							pair programming, decreasing post-release defects by
+							30%.
+						</li>
+						<li>
+							Managed end-to-end project delivery including
+							requirements gathering, technical documentation, and
+							stakeholder collaboration.
+						</li>
+					</ul>
+				</div>
+				<div class="timeline-item">
+					<h4>Senior Software Engineer</h4>
+					<span class="timeline-company"
+						>Turf Tech | Feb 2022 - Jun 2023</span
+					>
+					<ul>
+						<li>
+							Built and optimized RESTful services backed by SQL
+							Server, reducing P95 API latency from 420ms to
+							180ms.
+						</li>
+						<li>
+							Led development of ERA POS & E-Commerce platform for
+							Agha Khan University, supporting 10k+ daily
+							transactions with 99.9% uptime.
+						</li>
+						<li>
+							Developed GIFT & POSM Inventory PWA for Colgate
+							Palmolive, integrating with SAP and reducing manual
+							reconciliation by 35%.
+						</li>
+					</ul>
+				</div>
+				<div class="timeline-item">
+					<h4>Junior .NET Developer</h4>
+					<span class="timeline-company"
+						>Turf Tech | Jul 2020 - Jan 2022</span
+					>
+					<ul>
+						<li>
+							Developed and maintained enterprise applications
+							using .NET Framework, WinForms, and ASP.NET
+							WebForms.
+						</li>
+						<li>
+							Built responsive user interfaces with UWP (Universal
+							Windows Platform) for desktop applications.
+						</li>
+						<li>
+							Implemented client-side functionality using
+							JavaScript and jQuery for seamless API
+							communication.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</BentoCard>
+
+		<!-- GitHub Repos (Dynamic) -->
+		<BentoCard
+			span="col-span-2"
+			rowSpan="row-span-2"
+			id="projects"
+			title="github/repos"
+		>
+			<div id="repos-container" class="repos-grid pb-2">
+				<div class="loading-state terminal-font">
+					<span class="cursor">_</span> Fetching repositories from GitHub...
+				</div>
+			</div>
+		</BentoCard>
+
+		<!-- Certifications -->
+		<BentoCard
+			span="col-span-4"
+			rowSpan="row-span-1"
+			id="certifications"
+			title="credentials"
+		>
+			<div class="certs-grid">
+				<a
+					href="https://www.linkedin.com/learning/certificates/d8a2a53248543f80c82e49d2f7e8d9ee3cd82e4357f96107513ac3bc72aadfc3"
+					target="_blank"
+					class="cert-item"
+				>
+					<i class="fab fa-linkedin cert-icon"></i>
+					<div>
+						<h5>Expert DDD Implementation in .NET</h5>
+						<span class="text-xs">LinkedIn</span>
+					</div>
+				</a>
+				<a
+					href="https://www.credly.com/badges/48ea22c7-bf5a-4965-b7e9-d2da28182b0c/linked_in_profile"
+					target="_blank"
+					class="cert-item"
+				>
+					<i class="fab fa-github cert-icon"></i>
+					<div>
+						<h5>GitHub Foundations</h5>
+						<span class="text-xs">GitHub</span>
+					</div>
+				</a>
+				<a
+					href="https://www.linkedin.com/learning/certificates/92ea72fa8a1ed8e853abe9991b73fe729d50ec54ed2a5748724e76e507cb5e83"
+					target="_blank"
+					class="cert-item"
+				>
+					<i class="fab fa-microsoft cert-icon"></i>
+					<div>
+						<h5>Career Essentials in Software Dev</h5>
+						<span class="text-xs">Microsoft</span>
+					</div>
+				</a>
+				<a
+					href="https://freecodecamp.org/certification/shahriyarali/foundational-c-sharp-with-microsoft"
+					target="_blank"
+					class="cert-item"
+				>
+					<i class="fas fa-code cert-icon"></i>
+					<div>
+						<h5>Foundational C#</h5>
+						<span class="text-xs">freeCodeCamp</span>
+					</div>
+				</a>
+				<a
+					href="https://www.credly.com/badges/0242a4ac-fb0c-4320-96b2-9d10b343b29e"
+					target="_blank"
+					class="cert-item hidden-cert"
+				>
+					<i class="fab fa-microsoft cert-icon"></i>
+					<div>
+						<h5>Azure AI Fundamentals</h5>
+						<span class="text-xs">Microsoft</span>
+					</div>
+				</a>
+				<a
+					href="https://learn.microsoft.com/api/credentials/share/en-us/syed-shahriyar/EB378DFFF626F42E"
+					target="_blank"
+					class="cert-item hidden-cert"
+				>
+					<i class="fab fa-microsoft cert-icon"></i>
+					<div>
+						<h5>
+							Develop an ASP.NET Core web app that consumes an API
+						</h5>
+						<span class="text-xs">Microsoft</span>
+					</div>
+				</a>
+				<a
+					href="https://www.credly.com/badges/46c9596f-a900-4bc2-9da8-be85bc469de8"
+					target="_blank"
+					class="cert-item hidden-cert"
+				>
+					<i class="fab fa-microsoft cert-icon"></i>
+					<div>
+						<h5>Azure Fundamentals</h5>
+						<span class="text-xs">Microsoft</span>
+					</div>
+				</a>
+				<a href="#" target="_blank" class="cert-item hidden-cert">
+					<i class="fas fa-graduation-cap cert-icon"></i>
+					<div>
+						<h5>The Web Developer Bootcamp</h5>
+						<span class="text-xs">Udemy</span>
+					</div>
+				</a>
+			</div>
+			<div class="expand-btn-container mt-4">
+				<button id="toggleCertsBtn" class="terminal-font"
+					>&gt; _show_all</button
+				>
+			</div>
+		</BentoCard>
+	</div>
+
+	<footer class="footer terminal-font">
+		<p>
+			Copyright © {new Date().getFullYear()} Syed Shahriyar Ali.
+		</p>
+	</footer>
+</Layout>
+
+<script>
+	// Fetch GitHub Repos
+	async function loadGitHubRepos() {
+		try {
+			const res = await fetch(
+				"https://api.github.com/users/SyedShahriyarAli/repos",
+			);
+			let repos = await res.json();
+			// Filter and slice like old implementation
+			repos = repos
+				.filter(
+					(r: any) => r.language === "C#" && r.name !== "SqlStudio",
+				)
+				.slice(0, 6);
+
+			const container = document.getElementById("repos-container");
+			if (!container) return;
+
+			container.innerHTML = repos
+				.map(
+					(repo: any) => `
+				<a href="${repo.html_url}" target="_blank" class="repo-card-link">
+					<div class="repo-card">
+						<h4>${repo.name}</h4>
+						<p>${repo.description || "No description provided."}</p>
+						<div class="repo-meta">
+							<span><i class="fa-solid fa-star"></i> ${repo.stargazers_count}</span>
+							<span class="repo-lang"><i class="fa-solid fa-code"></i> ${repo.language}</span>
+						</div>
+					</div>
+				</a>
+			`,
+				)
+				.join("");
+		} catch (error) {
+			console.error("Failed to load GitHub repos", error);
+			const container = document.getElementById("repos-container");
+			if (container) {
+				container.innerHTML =
+					'<span style="color:red">[Error]: Connection refused by api.github.com</span>';
+			}
+		}
+	}
+
+	loadGitHubRepos();
+
+	document
+		.getElementById("toggleCertsBtn")
+		?.addEventListener("click", (e) => {
+			const btn = e.target as HTMLButtonElement;
+			const hiddenCerts = document.querySelectorAll(".hidden-cert");
+			hiddenCerts.forEach((cert) => {
+				cert.classList.toggle("show-cert");
+			});
+
+			if (btn.innerText.includes("show_all")) {
+				btn.innerHTML = "&gt; _show_less";
+			} else {
+				btn.innerHTML = "&gt; _show_all";
+			}
+		});
+</script>
+
+<style>
+	/* Inline critical page styles */
+	.mt-1 {
+		margin-top: 0.25rem;
+	}
+	.mt-2 {
+		margin-top: 0.5rem;
+	}
+	.mt-4 {
+		margin-top: 1rem;
+	}
+	.pb-2 {
+		padding-bottom: 0.5rem;
+	}
+
+	.text-sm {
+		font-size: 0.875rem;
+	}
+	.text-xs {
+		font-size: 0.75rem;
+	}
+	.text-muted {
+		color: var(--text-muted);
+	}
+
+	.hero-content {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		height: 100%;
+	}
+
+	.avatar {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 2px solid var(--accent-cyan);
+		box-shadow: var(--shadow-glow);
+		object-fit: cover;
+	}
+
+	.bio {
+		font-size: 1.1rem;
+		max-width: 600px;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.social-links a {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(255, 255, 255, 0.05);
+		padding: 0.5rem 1rem;
+		border-radius: 8px;
+		border: 1px solid var(--border-color);
+		color: var(--text-main);
+	}
+
+	.social-links a:hover {
+		background: rgba(14, 165, 233, 0.1);
+		border-color: var(--accent-cyan);
+		color: var(--accent-cyan);
+	}
+
+	.stats-grid {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+		height: 100%;
+	}
+
+	.stat-item {
+		text-align: center;
+	}
+
+	.stat-value {
+		font-size: 2.5rem;
+		font-weight: 800;
+		display: block;
+		line-height: 1;
+	}
+
+	.stat-label {
+		font-family: var(--font-mono);
+		font-size: 0.85rem;
+		color: var(--text-muted);
+		text-transform: uppercase;
+	}
+
+	.edu-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		height: 100%;
+	}
+	.edu-icon {
+		font-size: 2rem;
+		color: var(--accent-cyan);
+	}
+
+	.skills-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		align-items: center;
+	}
+
+	.skill-tag {
+		background: rgba(14, 165, 233, 0.1);
+		border: 1px solid rgba(14, 165, 233, 0.3);
+		color: var(--text-main);
+		padding: 0.4rem 0.8rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		transition: all 0.2s ease;
+	}
+
+	.skill-tag:hover {
+		background: rgba(14, 165, 233, 0.2);
+		border-color: var(--accent-cyan);
+		transform: translateY(-2px);
+	}
+
+	.timeline {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.timeline-item {
+		position: relative;
+		padding-left: 1.5rem;
+		border-left: 1px solid var(--border-color);
+	}
+
+	.timeline-item::before {
+		content: "";
+		position: absolute;
+		left: -4px;
+		top: 6px;
+		width: 7px;
+		height: 7px;
+		background: var(--accent-cyan);
+		border-radius: 50%;
+		box-shadow: 0 0 10px var(--accent-cyan);
+	}
+
+	.timeline-item h4 {
+		color: var(--text-main);
+		margin-bottom: 0.1rem;
+	}
+
+	.timeline-company {
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+		color: var(--accent-cyan);
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.timeline-item ul {
+		list-style: none;
+		color: var(--text-muted);
+		font-size: 0.9rem;
+	}
+
+	.timeline-item ul li {
+		position: relative;
+		padding-left: 1rem;
+		margin-bottom: 0.3rem;
+	}
+	.timeline-item ul li::before {
+		content: "▹";
+		position: absolute;
+		left: 0;
+		color: var(--text-muted);
+	}
+
+	/* Repos loading state */
+	.loading-state {
+		padding: 2rem;
+		text-align: center;
+		color: var(--text-muted);
+	}
+
+	/* Dynamic GitHub Repo styles target */
+	:global(.repos-grid) {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	:global(.repo-card-link) {
+		display: block;
+	}
+
+	:global(.repo-card) {
+		background: rgba(0, 0, 0, 0.2);
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		padding: 1rem;
+		transition: all 0.2s ease;
+		height: 100%;
+	}
+
+	:global(.repo-card:hover) {
+		border-color: var(--accent-cyan);
+		background: rgba(14, 165, 233, 0.05);
+	}
+
+	:global(.repo-card h4) {
+		color: var(--text-main);
+	}
+
+	:global(.repo-card p) {
+		font-size: 0.85rem;
+		margin-top: 0.4rem;
+		margin-bottom: 0.8rem;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	:global(.repo-meta) {
+		display: flex;
+		gap: 1rem;
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+		color: var(--text-muted);
+	}
+
+	:global(.repo-lang) {
+		color: var(--accent-cyan);
+	}
+
+	.certs-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
+	}
+
+	.cert-item {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		background: rgba(255, 255, 255, 0.03);
+		padding: 1.25rem;
+		border-radius: 8px;
+		border: 1px solid var(--border-color);
+	}
+
+	.cert-item h5 {
+		font-size: 1.2rem;
+		margin-bottom: 0.25rem;
+		color: var(--text-main);
+	}
+
+	.cert-item span {
+		font-size: 0.95rem;
+	}
+
+	.cert-item:hover {
+		background: rgba(14, 165, 233, 0.05);
+		border-color: var(--accent-cyan);
+	}
+
+	.cert-icon {
+		font-size: 2rem;
+		color: var(--accent-cyan);
+	}
+
+	.hidden-cert {
+		display: none;
+	}
+
+	.hidden-cert.show-cert {
+		display: flex;
+	}
+
+	.expand-btn-container {
+		text-align: center;
+	}
+
+	#toggleCertsBtn {
+		background: transparent;
+		color: var(--accent-cyan);
+		border: 1px dashed var(--border-color);
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		cursor: pointer;
+		font-size: 0.9rem;
+		transition: all 0.2s ease;
+	}
+
+	#toggleCertsBtn:hover {
+		border-color: var(--accent-cyan);
+		background: rgba(14, 165, 233, 0.05);
+	}
+
+	.footer {
+		text-align: center;
+		margin-top: 4rem;
+		padding-bottom: 2rem;
+		color: var(--text-muted);
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 1024px) {
+		.hero-content {
+			flex-direction: column;
+			text-align: center;
+		}
+		.social-links {
+			justify-content: center;
+		}
+		.certs-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.certs-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
