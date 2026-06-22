@@ -3,63 +3,64 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	description = "Senior Software Engineer specializing in .NET Core, Blazor, and Azure. Delivering enterprise solutions with 99.9% reliability for clients including Agha Khan University and Colgate Palmolive.",
+} = Astro.props;
+
+const siteUrl = Astro.site?.href ?? "https://shahriyarali.com";
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: "Syed Shahriyar Ali",
+	jobTitle: "Senior Software Engineer",
+	url: siteUrl,
+	email: "syedshahriyar.ali@outlook.com",
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Karachi",
+		addressCountry: "PK",
+	},
+	sameAs: [
+		"https://github.com/SyedShahriyarAli",
+		"https://www.linkedin.com/in/syed-shahriyar-ali/",
+	],
+};
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Syed Shahriyar Ali - Software Engineer @ AME" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<link rel="canonical" href={canonicalUrl} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content="https://github.com/SyedShahriyarAli.png" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="https://github.com/SyedShahriyarAli.png" />
+
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 	</head>
 	<body>
-		<div class="noise-overlay"></div>
-		<div class="ambient-light main-light"></div>
-		<div class="ambient-light secondary-light"></div>
-		
+		<div class="bg-gradient-orb" style="top: -10%; left: -10%; width: 50vw; height: 50vw; background: rgba(56, 189, 248, 0.15);"></div>
+		<div class="bg-gradient-orb" style="top: 40%; right: -20%; width: 60vw; height: 60vw; background: rgba(129, 140, 248, 0.1);"></div>
 		<slot />
-		
-		<style>
-			.noise-overlay {
-				position: fixed;
-				inset: 0;
-				z-index: -5;
-				background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-				opacity: 0.03;
-				pointer-events: none;
-			}
-			
-			.ambient-light {
-				position: fixed;
-				border-radius: 50%;
-				filter: blur(120px);
-				z-index: -10;
-				pointer-events: none;
-				opacity: 0.15;
-			}
-			
-			.main-light {
-				background: var(--accent-cyan);
-				width: 50vw;
-				height: 50vh;
-				top: -10vh;
-				right: -10vw;
-			}
-			
-			.secondary-light {
-				background: var(--accent-purple);
-				width: 40vw;
-				height: 40vh;
-				bottom: -10vh;
-				left: -10vw;
-			}
-		</style>
 	</body>
 </html>

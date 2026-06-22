@@ -1,0 +1,70 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner card">
+      <a href="#" class="logo text-gradient">Syed Shahriyar Ali</a>
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#writing">Writing</a>
+        <a href="#open-source">Open Source</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="/Syed-Shahriyar-Ali-.NET-Developer.pdf" target="_blank" class="btn btn-primary header-cta">
+        Resume
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0 1.5rem;
+    border-radius: var(--radius-full);
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .nav a:hover {
+    color: var(--text);
+  }
+
+  .header-cta {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .nav {
+      display: none;
+    }
+  }
+</style>

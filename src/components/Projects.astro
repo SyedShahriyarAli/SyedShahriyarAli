@@ -1,0 +1,35 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<section id="work" class="section">
+  <div class="container" data-reveal-section>
+    <h2 class="section-title">Work I'm proud of</h2>
+    <p class="section-desc">
+      Enterprise platforms for healthcare, FMCG, and parcel logistics. Internal
+      UIs are confidential — these summaries focus on scope, outcomes, and architecture.
+    </p>
+
+    <div class="projects-list">
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .projects-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

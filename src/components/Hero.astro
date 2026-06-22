@@ -1,0 +1,225 @@
+<section class="hero">
+  <div class="container hero-grid" data-reveal-section>
+    <div class="hero-content">
+      <div class="tag" style="margin-bottom: 1.5rem;">
+        Senior Software Engineer
+      </div>
+      <h1 class="hero-title">
+        <span class="text-accent">Syed Shahriyar</span> Ali
+      </h1>
+      <p class="hero-subtitle text-gradient">.NET · Blazor · Azure</p>
+      <p class="hero-desc">
+        I'm a .NET developer with 5+ years building POS, inventory, and parcel
+        logistics platforms for organizations like <strong style="color: #fff"
+          >Agha Khan University</strong
+        >
+        and <strong style="color: #fff">Colgate Palmolive</strong>. I also write
+        about .NET on Medium and ship open-source tools on GitHub.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View My Work</a>
+        <a
+          href="/Syed-Shahriyar-Ali-.NET-Developer.pdf"
+          target="_blank"
+          class="btn btn-outline"
+        >
+          Download Resume
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span
+          ><i class="fa-solid fa-location-dot" style="margin-right: 4px"></i> Karachi,
+          Pakistan</span
+        >
+        <span class="meta-sep">·</span>
+        <span
+          ><i class="fa-solid fa-briefcase" style="margin-right: 4px"></i> 5+ years
+          experience</span
+        >
+      </div>
+
+      <div class="client-strip">
+        <span>Agha Khan University</span>
+        <span class="meta-sep">·</span>
+        <span>Colgate Palmolive</span>
+        <span class="meta-sep">·</span>
+        <span>PMAC</span>
+      </div>
+
+      <div class="metrics-row">
+        <div class="metric card">
+          <span class="metric-value">99.9%</span>
+          <span class="metric-label">Platform uptime</span>
+        </div>
+        <div class="metric card">
+          <span class="metric-value">45%</span>
+          <span class="metric-label">Checkout latency cut</span>
+        </div>
+        <div class="metric card">
+          <span class="metric-value"
+            >420<span style="opacity: 0.5">→</span>180ms</span
+          >
+          <span class="metric-label">P95 API latency</span>
+        </div>
+        <div class="metric card">
+          <span class="metric-value">10k+</span>
+          <span class="metric-label">Daily transactions</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="photo-frame">
+        <div class="photo-glow"></div>
+        <img
+          src="https://github.com/SyedShahriyarAli.png"
+          alt="Syed Shahriyar Ali"
+          class="hero-photo"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 8rem 0 6rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 580px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .meta-sep {
+    color: var(--border-strong);
+  }
+
+  .client-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8125rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 2.5rem;
+  }
+
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .metric {
+    padding: 1.25rem;
+    text-align: left;
+  }
+
+  .metric-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+  }
+
+  .metric-label {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .photo-frame {
+    position: relative;
+    border-radius: var(--radius-lg);
+    z-index: 1;
+    padding: 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+  }
+
+  .photo-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    z-index: -1;
+    filter: blur(20px);
+    border-radius: 50%;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: calc(var(--radius-lg) - 0.5rem);
+    box-shadow: var(--shadow-lg);
+    filter: grayscale(20%) contrast(1.1);
+    transition: filter 0.5s ease;
+  }
+
+  .photo-frame:hover .hero-photo {
+    filter: grayscale(0%) contrast(1);
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-photo-wrap {
+      max-width: 400px;
+      margin: 0 auto;
+      order: -1;
+    }
+  }
+</style>

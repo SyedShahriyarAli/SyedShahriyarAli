@@ -1,0 +1,79 @@
+---
+import { skillCategories } from "../data/skills";
+---
+
+<section id="skills" class="section skills-section">
+  <div class="container" data-reveal-section>
+    <h2 class="section-title">Skills</h2>
+    <p class="section-desc">
+      Technologies and practices used across enterprise .NET projects.
+    </p>
+
+    <div class="skills-grid">
+      {
+        skillCategories.map((category) => (
+          <div class="skill-group card">
+            <h3 class="skill-category">{category.label}</h3>
+            <div class="skill-tags">
+              {category.skills.map((skill) => (
+                <span class="tag">{skill}</span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-section {
+    position: relative;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-group {
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-group:nth-child(2) {
+    grid-row: span 2;
+  }
+
+  .skill-category {
+    font-size: 1rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 0.6rem;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    .skill-group:nth-child(2) {
+      grid-row: auto;
+    }
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import { certifications } from "../data/certifications";
+---
+
+<section id="certifications" class="section">
+  <div class="container" data-reveal-section>
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="certs-grid">
+      {
+        certifications.map((cert) => (
+          <a
+            href={cert.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-card card"
+          >
+            <i class={`${cert.icon} cert-icon`}></i>
+            <div>
+              <h3>{cert.title}</h3>
+              <p>{cert.issuer}</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .cert-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    color: inherit;
+  }
+
+  .cert-card:hover {
+    color: inherit;
+  }
+
+  .cert-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    width: 2rem;
+    text-align: center;
+  }
+
+  .cert-card h3 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 0.125rem;
+    color: var(--text);
+  }
+
+  .cert-card p {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+  }
+
+  .cert-arrow {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  .cert-card:hover .cert-arrow {
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .certs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,121 @@
+---
+import { articles, mediumProfile } from "../data/writing";
+---
+
+<section id="writing" class="section">
+  <div class="container" data-reveal-section>
+    <p class="section-label">Writing</p>
+    <h2 class="section-title">Articles on Medium</h2>
+    <p class="section-desc">
+      Technical write-ups on .NET, Blazor, EF Core, and AI — sharing what I learn
+      while building production systems.
+    </p>
+
+    <div class="article-list">
+      {
+        articles.map((article) => (
+          <a
+            href={article.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="article-row"
+          >
+            <div>
+              <time class="article-date">{article.date}</time>
+              <h3 class="article-title">{article.title}</h3>
+              <p class="article-excerpt">{article.excerpt}</p>
+            </div>
+            <span class="article-link-label">Read on Medium →</span>
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="section-footer-link">
+      <a href={mediumProfile} target="_blank" rel="noopener noreferrer">
+        View all articles on Medium →
+      </a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .article-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.75rem;
+    color: inherit;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: var(--glass-blur);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  .article-row:hover {
+    color: inherit;
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .article-row:hover .article-title {
+    color: var(--accent);
+  }
+
+  .article-date {
+    display: block;
+    font-size: 0.8125rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .article-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    transition: color 0.2s ease;
+  }
+
+  .article-excerpt {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-link-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+
+  .section-footer-link {
+    margin-top: 2rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .article-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

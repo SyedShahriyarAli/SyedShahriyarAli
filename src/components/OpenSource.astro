@@ -1,0 +1,154 @@
+---
+import { openSourceRepos, githubProfile } from "../data/openSource";
+---
+
+<section id="open-source" class="section open-source-section">
+  <div class="container" data-reveal-section>
+    <h2 class="section-title">Open source</h2>
+    <p class="section-desc">
+      Side projects and experiments on GitHub — where I explore Clean Architecture,
+      AI tooling, and modern .NET patterns outside of client work.
+    </p>
+
+    <div class="repo-list">
+      {
+        openSourceRepos.map((repo) => (
+          <a
+            href={repo.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="repo-row"
+          >
+            <div class="repo-main">
+              <div class="repo-header">
+                <span class="repo-name">{repo.name}</span>
+                {repo.stars != null && repo.stars > 0 && (
+                  <span class="repo-stars">
+                    <i class="fa-solid fa-star"></i> {repo.stars}
+                  </span>
+                )}
+              </div>
+              <p class="repo-desc">{repo.description}</p>
+              <div class="repo-stack">
+                {repo.stack.map((tech) => (
+                  <span class="tag">{tech}</span>
+                ))}
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square repo-arrow"></i>
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="section-footer-link">
+      <a href={githubProfile} target="_blank" rel="noopener noreferrer">
+        View all repositories on GitHub →
+      </a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .open-source-section {
+    position: relative;
+  }
+
+  .repo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .repo-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    color: inherit;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: var(--glass-blur);
+    transition: all 0.3s ease;
+  }
+
+  .repo-row:hover {
+    color: inherit;
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .repo-row:hover .repo-name {
+    color: var(--accent);
+  }
+
+  .repo-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .repo-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    color: var(--text);
+    transition: color 0.2s ease;
+  }
+
+  .repo-stars {
+    font-size: 0.8125rem;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-full);
+  }
+
+  .repo-stars i {
+    font-size: 0.75rem;
+    margin-right: 0.2rem;
+  }
+
+  .repo-desc {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .repo-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .repo-arrow {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+
+  .repo-row:hover .repo-arrow {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+  }
+
+  .section-footer-link {
+    margin-top: 2rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .repo-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

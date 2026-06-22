@@ -1,0 +1,125 @@
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="contact-card card" data-reveal-section>
+      <div class="contact-content">
+        <h2 class="section-title">Let's connect</h2>
+        <p class="contact-desc">
+          Open to senior .NET engineering roles and enterprise project opportunities.
+        </p>
+
+        <div class="contact-details">
+          <a href="mailto:syedshahriyar.ali@outlook.com" class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            syedshahriyar.ali@outlook.com
+          </a>
+          <span class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            Karachi, Pakistan
+          </span>
+        </div>
+      </div>
+
+      <div class="contact-actions">
+        <a
+          href="https://www.linkedin.com/in/syed-shahriyar-ali/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+          href="https://github.com/SyedShahriyarAli"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a
+          href="https://medium.com/@shahriyarali08"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          <i class="fa-brands fa-medium"></i> Medium
+        </a>
+        <a href="mailto:syedshahriyar.ali@outlook.com" class="btn btn-outline">
+          <i class="fa-solid fa-paper-plane"></i> Send Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    padding-bottom: 3rem;
+  }
+
+  .contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem;
+    background: var(--bg-subtle);
+  }
+
+  .contact-content .section-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-desc {
+    margin-bottom: 1.5rem;
+    max-width: 440px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+  }
+
+  a.contact-item:hover {
+    color: var(--accent);
+  }
+
+  .contact-item i {
+    width: 1.125rem;
+    color: var(--accent);
+    text-align: center;
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .contact-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.75rem;
+    }
+
+    .contact-actions {
+      width: 100%;
+    }
+
+    .contact-actions .btn {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>

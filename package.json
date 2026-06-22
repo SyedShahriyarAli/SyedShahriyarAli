@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@motionone/dom": "^10.18.0",
     "astro": "^6.1.3"
   }
 }

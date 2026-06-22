@@ -1,0 +1,48 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; {new Date().getFullYear()} Syed Shahriyar Ali. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/syed-shahriyar-ali/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/SyedShahriyarAli" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://medium.com/@shahriyarali08" target="_blank" rel="noopener noreferrer">Medium</a>
+      <a href="/Syed-Shahriyar-Ali-.NET-Developer.pdf" target="_blank">Resume</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    background: var(--bg);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-inner p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+</style>
