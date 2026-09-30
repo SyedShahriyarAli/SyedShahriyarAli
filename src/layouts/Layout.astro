@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { skillCategories } from '../data/skills';
 
 interface Props {
 	title: string;
@@ -8,16 +9,27 @@ interface Props {
 
 const {
 	title,
-	description = "Senior Software Engineer specializing in .NET Core, Blazor, and Azure. Delivering enterprise solutions with 99.9% reliability for clients including Agha Khan University and Colgate Palmolive.",
+	description = "Senior Software Engineer specializing in .NET Core, Blazor, and Azure. Delivering enterprise solutions with 99.9% reliability for clients including Aga Khan University and Colgate Palmolive.",
 } = Astro.props;
 
 const siteUrl = Astro.site?.href ?? "https://shahriyarali.com";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 
+// Analytics is opt-in: nothing loads until one of these is set at build time
+// (see .env.example). Both options are cookie-free.
+const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+const umamiId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
+const umamiSrc =
+	import.meta.env.PUBLIC_UMAMI_SRC ?? "https://cloud.umami.is/script.js";
+
+const ogImage = new URL("/shahriyar.png", siteUrl).href;
+
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "Person",
 	name: "Syed Shahriyar Ali",
+	image: ogImage,
+	knowsAbout: skillCategories.flatMap((c) => c.skills),
 	jobTitle: "Senior Software Engineer",
 	url: siteUrl,
 	email: "syedshahriyar.ali@outlook.com",
@@ -49,14 +61,26 @@ const jsonLd = {
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:image" content="https://github.com/SyedShahriyarAli.png" />
+		<meta property="og:image" content={ogImage} />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content="https://github.com/SyedShahriyarAli.png" />
+		<meta name="twitter:image" content={ogImage} />
 
 		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+		{cfBeaconToken && (
+			<script
+				is:inline
+				type="module"
+				src="https://static.cloudflareinsights.com/beacon.min.js"
+				data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+			></script>
+		)}
+		{umamiId && (
+			<script is:inline defer src={umamiSrc} data-website-id={umamiId}></script>
+		)}
 	</head>
 	<body>
 		<div class="bg-gradient-orb" style="top: -10%; left: -10%; width: 50vw; height: 50vw; background: rgba(56, 189, 248, 0.15);"></div>
