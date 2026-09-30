@@ -1,0 +1,116 @@
+---
+import { education, volunteering, recognition } from "../data/experience";
+
+const groups = [
+  { label: "Education", items: education },
+  { label: "Volunteer", items: volunteering },
+  { label: "Recognition", items: recognition.slice(0, 1) },
+  { label: "Community", items: recognition.slice(1) },
+];
+---
+
+<section id="education" class="section education">
+  <div class="container" data-reveal-section>
+    <h2 class="section-title">Education &amp; community</h2>
+
+    <div class="edu-grid">
+      {
+        groups.map((group) =>
+          group.items.map((item) => (
+            <article class="edu-card card">
+              <p class="edu-label">{group.label}</p>
+              <h3>{item.title}</h3>
+              <p class="edu-org">{item.org}</p>
+              {item.note && <p class="edu-note">{item.note}</p>}
+              <div class="edu-footer">
+                <span class="edu-period">{item.period}</span>
+                {item.href && (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="edu-link"
+                  >
+                    {item.hrefLabel ?? "Learn more"} →
+                  </a>
+                )}
+              </div>
+            </article>
+          ))
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .education {
+    padding-top: 0;
+  }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .edu-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem;
+  }
+
+  .edu-label {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .edu-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-org {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .edu-note {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .edu-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .edu-period {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+  }
+
+  .edu-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 720px) {
+    .edu-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -24,7 +24,7 @@ I'm a **Senior Software Engineer** with over 5 years of experience building scal
 *   **Cloud & DevOps**: I build cloud-first, scalable solutions on Azure with robust CI/CD pipelines.
 
 ### 💼 Career Highlights
-*   **ERA POS & E-Commerce (Agha Khan University)**: Engineered a high-throughput transaction system.
+*   **ERA POS & E-Commerce (Aga Khan University)**: Engineered a high-throughput transaction system.
 *   **Inventory System (Colgate Palmolive)**: Built a Blazor PWA integrated with SAP, reducing manual reconciliation time by 35%.
 *   **PMAC Platform (AME Software Solutions)**: Modernized legacy parcel audit and shipping cost recovery platforms.
 

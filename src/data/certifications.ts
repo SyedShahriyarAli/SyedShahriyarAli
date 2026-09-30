@@ -54,4 +54,16 @@ export const certifications: Certification[] = [
     href: "https://freecodecamp.org/certification/shahriyarali/foundational-c-sharp-with-microsoft",
     icon: "fas fa-code",
   },
+  {
+    title: "Google IT Support Professional Certificate",
+    issuer: "Google · Coursera",
+    href: "https://www.credly.com/badges/d6bc953e-23c8-44e3-89eb-8d37833ec44b",
+    icon: "fab fa-google",
+  },
+  {
+    title: "Google AI Essentials",
+    issuer: "Google · Coursera",
+    href: "https://coursera.org/verify/specialization/64DZSY65MACF",
+    icon: "fab fa-google",
+  },
 ];

@@ -28,6 +28,7 @@ import { openSourceRepos, githubProfile } from "../data/openSource";
                   </span>
                 )}
               </div>
+              {repo.badge && <p class="repo-badge">{repo.badge}</p>}
               <p class="repo-desc">{repo.description}</p>
               <div class="repo-stack">
                 {repo.stack.map((tech) => (
@@ -112,6 +113,18 @@ import { openSourceRepos, githubProfile } from "../data/openSource";
   .repo-stars i {
     font-size: 0.75rem;
     margin-right: 0.2rem;
+  }
+
+  .repo-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 0.75rem;
   }
 
   .repo-desc {

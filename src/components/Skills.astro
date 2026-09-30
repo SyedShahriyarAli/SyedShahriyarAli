@@ -12,14 +12,14 @@ import { skillCategories } from "../data/skills";
     <div class="skills-grid">
       {
         skillCategories.map((category) => (
-          <div class="skill-group card">
+          <article class="skill-group card">
             <h3 class="skill-category">{category.label}</h3>
-            <div class="skill-tags">
+            <ul class="skill-tags">
               {category.skills.map((skill) => (
-                <span class="tag">{skill}</span>
+                <li class="tag">{skill}</li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </article>
         ))
       }
     </div>
@@ -33,7 +33,7 @@ import { skillCategories } from "../data/skills";
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
@@ -44,15 +44,10 @@ import { skillCategories } from "../data/skills";
     flex-direction: column;
   }
 
-  .skill-group:nth-child(2) {
-    grid-row: span 2;
-  }
-
   .skill-category {
     font-size: 1rem;
     font-family: var(--font-display);
     font-weight: 600;
-    text-transform: capitalize;
     color: var(--text);
     margin-bottom: 1.25rem;
     padding-bottom: 1rem;
@@ -66,14 +61,18 @@ import { skillCategories } from "../data/skills";
     align-items: flex-start;
     gap: 0.6rem;
     flex-grow: 1;
+    list-style: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
     .skills-grid {
       grid-template-columns: 1fr;
-    }
-    .skill-group:nth-child(2) {
-      grid-row: auto;
     }
   }
 </style>

@@ -4,6 +4,7 @@ export interface OpenSourceRepo {
   href: string;
   stack: string[];
   stars?: number;
+  badge?: string;
 }
 
 export const openSourceRepos: OpenSourceRepo[] = [
@@ -21,6 +22,14 @@ export const openSourceRepos: OpenSourceRepo[] = [
     href: "https://github.com/SyedShahriyarAli/Executr",
     stack: [".NET 8", "Blazor WASM", "MudBlazor"],
     stars: 1,
+  },
+  {
+    name: "DejaPlay",
+    description:
+      "Finds historically similar football possessions with vector similarity in Qdrant, then compares them on an interactive timeline and pitch animation. ASP.NET Core API with a React, TypeScript and D3 front-end.",
+    href: "https://github.com/SyedShahriyarAli/DejaPlay",
+    stack: ["ASP.NET Core", "Qdrant", "React", "D3"],
+    badge: "Qdrant Hackathon 2026 · Honorable mention",
   },
   {
     name: "TextToSql",
