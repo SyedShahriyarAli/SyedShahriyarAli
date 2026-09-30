@@ -32,6 +32,16 @@
     height: 4rem;
     padding: 0 1.5rem;
     border-radius: var(--radius-full);
+    background: rgba(9, 9, 11, 0.82);
+    border-color: var(--border-strong);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  .header-inner:hover {
+    transform: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   }
 
   .logo {
@@ -49,11 +59,13 @@
   .nav a {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text);
+    opacity: 0.85;
   }
 
   .nav a:hover {
-    color: var(--text);
+    color: var(--accent);
+    opacity: 1;
   }
 
   .header-cta {

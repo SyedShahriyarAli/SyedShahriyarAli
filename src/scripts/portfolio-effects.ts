@@ -43,5 +43,6 @@ export function initScrollReveal() {
 }
 
 export function initPortfolioEffects() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   initScrollReveal();
 }

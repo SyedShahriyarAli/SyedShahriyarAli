@@ -9,12 +9,14 @@
       </h1>
       <p class="hero-subtitle text-gradient">.NET · Blazor · Azure</p>
       <p class="hero-desc">
-        I'm a .NET developer with 5+ years building POS, inventory, and parcel
-        logistics platforms for organizations like <strong style="color: #fff"
-          >Agha Khan University</strong
-        >
-        and <strong style="color: #fff">Colgate Palmolive</strong>. I also write
-        about .NET on Medium and ship open-source tools on GitHub.
+        I'm a .NET developer with 5+ years building offline-first POS,
+        inventory, and parcel logistics platforms for organizations like <strong
+          style="color: #fff">Aga Khan University</strong
+        >{" "}
+        and <strong style="color: #fff">Colgate Palmolive</strong>. Right now
+        I'm modernizing PMAC to .NET 8 and building AI-powered chatbots at AME
+        Software Solutions. I also write about .NET on Medium and ship
+        open-source tools on GitHub.
       </p>
       <div class="hero-actions">
         <a href="#work" class="btn btn-primary">View My Work</a>
@@ -39,7 +41,7 @@
       </div>
 
       <div class="client-strip">
-        <span>Agha Khan University</span>
+        <span>Aga Khan University</span>
         <span class="meta-sep">·</span>
         <span>Colgate Palmolive</span>
         <span class="meta-sep">·</span>
@@ -50,20 +52,24 @@
         <div class="metric card">
           <span class="metric-value">99.9%</span>
           <span class="metric-label">Platform uptime</span>
+          <span class="metric-source">ERA POS · Turf Tech</span>
         </div>
         <div class="metric card">
           <span class="metric-value">45%</span>
           <span class="metric-label">Checkout latency cut</span>
+          <span class="metric-source">ERA POS · Turf Tech</span>
         </div>
         <div class="metric card">
           <span class="metric-value"
             >420<span style="opacity: 0.5">→</span>180ms</span
           >
           <span class="metric-label">P95 API latency</span>
+          <span class="metric-source">REST services · Turf Tech</span>
         </div>
         <div class="metric card">
           <span class="metric-value">10k+</span>
           <span class="metric-label">Daily transactions</span>
+          <span class="metric-source">ERA POS · Turf Tech</span>
         </div>
       </div>
     </div>
@@ -72,8 +78,11 @@
       <div class="photo-frame">
         <div class="photo-glow"></div>
         <img
-          src="https://github.com/SyedShahriyarAli.png"
+          src="/shahriyar.webp"
           alt="Syed Shahriyar Ali"
+          width="460"
+          height="460"
+          fetchpriority="high"
           class="hero-photo"
         />
       </div>
@@ -174,6 +183,15 @@
     font-size: 0.8125rem;
     color: var(--text-muted);
     line-height: 1.4;
+  }
+
+  .metric-source {
+    display: block;
+    margin-top: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--accent);
+    opacity: 0.8;
   }
 
   .photo-frame {
