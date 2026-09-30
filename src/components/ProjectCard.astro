@@ -1,5 +1,6 @@
 ---
 import type { Project } from "../data/projects";
+import EraArchitecture from "./EraArchitecture.astro";
 
 interface Props {
   project: Project;
@@ -38,19 +39,48 @@ const { project } = Astro.props;
         {project.stack.map((tech) => <span class="tag">{tech}</span>)}
       </div>
       {
-        project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link"
-          >
-            View site{" "}
-            <i
-              class="fa-solid fa-arrow-right"
-              style="margin-left: 4px; font-size: 0.8em"
-            />
-          </a>
+        project.diagram && (
+          <>
+            <button
+              type="button"
+              class="project-link diagram-btn"
+              data-diagram-open={project.slug}
+            >
+              View architecture{" "}
+              <i
+                class="fa-solid fa-diagram-project"
+                style="margin-left: 4px; font-size: 0.8em"
+              />
+            </button>
+            <dialog class="diagram-dialog" data-diagram-dialog={project.slug}>
+              <form method="dialog" class="diagram-close">
+                <button aria-label="Close architecture diagram">×</button>
+              </form>
+              <div class="diagram-body">
+                {project.diagram === "era" && <EraArchitecture />}
+              </div>
+            </dialog>
+          </>
+        )
+      }
+      {
+        project.links && (
+          <div class="project-links">
+            {project.links.map((link) => (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                {link.label}{" "}
+                <i
+                  class="fa-solid fa-arrow-right"
+                  style="margin-left: 4px; font-size: 0.8em"
+                />
+              </a>
+            ))}
+          </div>
         )
       }
     </div>
@@ -163,4 +193,71 @@ const { project } = Astro.props;
     align-items: center;
     align-self: flex-start;
   }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .diagram-btn {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--accent);
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .diagram-dialog {
+    width: min(1100px, 94vw);
+    max-height: 92vh;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-subtle);
+    color: var(--text);
+    overflow: auto;
+  }
+
+  .diagram-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .diagram-body {
+    overflow-x: auto;
+    padding-top: 1.5rem;
+  }
+
+  .diagram-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+  }
+
+  .diagram-close button {
+    background: var(--bg-muted);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    border: 0;
+    border-radius: var(--radius-full);
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+  }
 </style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-diagram-open]").forEach((btn) => {
+    const dialog = document.querySelector<HTMLDialogElement>(
+      `[data-diagram-dialog="${btn.dataset.diagramOpen}"]`,
+    );
+    btn.addEventListener("click", () => dialog?.showModal());
+    dialog?.addEventListener("click", (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+  });
+</script>

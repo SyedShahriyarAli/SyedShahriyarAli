@@ -1,0 +1,245 @@
+---
+// ERA system architecture, drawn as inline SVG so it inherits the site's
+// fonts and colour tokens. Rendered inside the ERA project card's dialog.
+---
+
+<svg
+  class="arch"
+  viewBox="0 0 960 490"
+  role="img"
+  aria-labelledby="era-arch-title era-arch-desc"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title id="era-arch-title">ERA architecture</title>
+  <desc id="era-arch-desc">
+    A Back Office (Blazor WebAssembly UI, ASP.NET Web API, SQL Server) is the
+    central hub. An e-commerce site and a .NET MAUI waiter app call its API. A
+    .NET MAUI front-office POS with a local SQLite database keeps trading
+    offline and syncs with the API. The waiter app also sends orders to the POS.
+    An optional Super Admin module manages multiple instances.
+  </desc>
+
+  <defs>
+    <marker
+      id="arr"
+      viewBox="0 0 10 10"
+      refX="8"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path d="M0 0 L10 5 L0 10 z" class="arrowhead"></path>
+    </marker>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Back Office hub -->
+  <rect x="340" y="20" width="320" height="390" rx="18" class="panel hub"></rect>
+  <text x="364" y="46" class="eyebrow">BACK OFFICE</text>
+  <text x="364" y="64" class="desc">Central hub for customers, inventory,</text>
+  <text x="364" y="78" class="desc">reports and user permissions.</text>
+
+  <g>
+    <rect x="364" y="100" width="272" height="58" rx="12" class="node"></rect>
+    <circle cx="384" cy="129" r="4" class="dot ui"></circle>
+    <text x="398" y="125" class="title">Admin UI</text>
+    <text x="398" y="143" class="tech">Blazor WebAssembly</text>
+  </g>
+  <g>
+    <rect x="364" y="212" width="272" height="64" rx="12" class="node"></rect>
+    <circle cx="384" cy="244" r="4" class="dot api"></circle>
+    <text x="398" y="240" class="title">Web API</text>
+    <text x="398" y="258" class="tech">ASP.NET Core</text>
+  </g>
+  <g>
+    <rect x="364" y="330" width="272" height="58" rx="12" class="node"></rect>
+    <circle cx="384" cy="359" r="4" class="dot data"></circle>
+    <text x="398" y="355" class="title">Database</text>
+    <text x="398" y="373" class="tech">SQL Server</text>
+  </g>
+  <path d="M500 158 V210" class="line" marker-end="url(#arr)"></path>
+  <path d="M500 276 V328" class="line" marker-end="url(#arr)"></path>
+
+  <!-- Channels -->
+  <g>
+    <rect x="24" y="40" width="210" height="84" rx="12" class="node"></rect>
+    <circle cx="44" cy="66" r="4" class="dot ui"></circle>
+    <text x="58" y="70" class="title">E-commerce</text>
+    <text x="44" y="90" class="tech">Blazor WebAssembly</text>
+    <text x="44" y="108" class="desc">Online store · catalog &amp; orders</text>
+  </g>
+  <g>
+    <rect x="24" y="170" width="210" height="84" rx="12" class="node"></rect>
+    <circle cx="44" cy="196" r="4" class="dot ui"></circle>
+    <text x="58" y="200" class="title">Waiter App</text>
+    <text x="44" y="220" class="tech">.NET MAUI</text>
+    <text x="44" y="238" class="desc">Takes orders on the go</text>
+  </g>
+  <g filter="url(#glow)">
+    <rect x="24" y="330" width="210" height="110" rx="12" class="node pos"></rect>
+  </g>
+  <circle cx="44" cy="356" r="4" class="dot ui"></circle>
+  <text x="58" y="360" class="title">Front Office (POS)</text>
+  <text x="44" y="380" class="tech">.NET MAUI · SQLite</text>
+  <text x="44" y="398" class="desc">Per-location sales terminal</text>
+  <text x="44" y="416" class="desc">Trades offline, syncs later</text>
+
+  <!-- Client → API -->
+  <path d="M234 82 H300 V235 H362" class="line" marker-end="url(#arr)"></path>
+  <path d="M234 212 H300" class="line"></path>
+  <circle cx="300" cy="212" r="3" class="junction"></circle>
+  <!-- Waiter → POS -->
+  <path d="M129 254 V328" class="line" marker-end="url(#arr)"></path>
+  <text x="141" y="296" class="label">orders</text>
+  <!-- POS ⇄ API (offline-capable sync) -->
+  <path
+    d="M234 385 H316 V258 H362"
+    class="line dashed"
+    marker-start="url(#arr)"
+    marker-end="url(#arr)"></path>
+  <text x="246" y="377" class="label">sync</text>
+
+  <!-- Super Admin (optional) -->
+  <path d="M660 244 H740" class="line dashed"></path>
+  <text x="700" y="234" text-anchor="middle" class="label">manages</text>
+  <text x="700" y="262" text-anchor="middle" class="label">instances</text>
+
+  <rect x="740" y="120" width="196" height="260" rx="18" class="panel optional"></rect>
+  <text x="756" y="146" class="eyebrow admin">SUPER ADMIN</text>
+  <text x="756" y="162" class="desc small">Optional · multi-instance</text>
+  <g>
+    <rect x="756" y="180" width="164" height="44" rx="10" class="node"></rect>
+    <text x="770" y="199" class="title sm">Admin UI</text>
+    <text x="770" y="214" class="tech sm">Blazor WebAssembly</text>
+  </g>
+  <g>
+    <rect x="756" y="244" width="164" height="44" rx="10" class="node"></rect>
+    <text x="770" y="263" class="title sm">Web API</text>
+    <text x="770" y="278" class="tech sm">ASP.NET Core</text>
+  </g>
+  <g>
+    <rect x="756" y="308" width="164" height="44" rx="10" class="node"></rect>
+    <text x="770" y="327" class="title sm">Database</text>
+    <text x="770" y="342" class="tech sm">SQL Server</text>
+  </g>
+  <path d="M838 224 V242" class="line" marker-end="url(#arr)"></path>
+  <path d="M838 288 V306" class="line" marker-end="url(#arr)"></path>
+
+  <!-- Legend -->
+  <path d="M340 470 H368" class="line"></path>
+  <text x="378" y="474" class="label">Online request</text>
+  <path d="M500 470 H528" class="line dashed"></path>
+  <text x="538" y="474" class="label">Offline-capable sync / optional module</text>
+</svg>
+
+<style>
+  .arch {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 720px;
+  }
+
+  .panel {
+    fill: rgba(255, 255, 255, 0.02);
+    stroke: var(--border-strong);
+    stroke-width: 1.5;
+  }
+  .panel.hub {
+    fill: rgba(56, 189, 248, 0.05);
+    stroke: rgba(56, 189, 248, 0.4);
+  }
+  .panel.optional {
+    stroke-dasharray: 6 5;
+    stroke: rgba(129, 140, 248, 0.5);
+    fill: rgba(129, 140, 248, 0.04);
+  }
+
+  .node {
+    fill: var(--bg-muted);
+    stroke: var(--border-strong);
+    stroke-width: 1;
+  }
+  .node.pos {
+    stroke: var(--accent);
+    stroke-width: 1.5;
+  }
+
+  .dot.ui {
+    fill: var(--accent);
+  }
+  .dot.api {
+    fill: #818cf8;
+  }
+  .dot.data {
+    fill: var(--success);
+  }
+
+  .line {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .line.dashed {
+    stroke-dasharray: 5 5;
+    stroke: #818cf8;
+  }
+  .junction {
+    fill: var(--accent);
+  }
+  .arrowhead {
+    fill: context-stroke;
+  }
+
+  text {
+    font-family: var(--font);
+  }
+  .title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 15px;
+    fill: var(--text);
+  }
+  .title.sm {
+    font-size: 13px;
+  }
+  .tech {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    fill: var(--accent);
+  }
+  .tech.sm {
+    font-size: 10px;
+  }
+  .desc {
+    font-size: 11px;
+    fill: var(--text-muted);
+  }
+  .desc.small {
+    font-size: 10px;
+    font-family: var(--font-mono);
+  }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    fill: var(--text-muted);
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    fill: var(--accent);
+  }
+  .eyebrow.admin {
+    fill: #818cf8;
+  }
+</style>
